@@ -59,7 +59,7 @@ public class App {
     for (int zip : zipCodes) {
       zipLists.add(Unirest.get(listBaseURL + "&postal_code=" + zip + "&price_max=" + maxPrice + "&limit=" + numListings)
                      .header("x-rapidapi-host", "realtor.p.rapidapi.com")
-                     .header("x-rapidapi-key", "whoa there I'm not putting my key here!")
+                     .header("x-rapidapi-key", "whoa there I'm not putting my key here!") //TODO: add api key
                      .asString()
                   );
       numOfReqs++;
